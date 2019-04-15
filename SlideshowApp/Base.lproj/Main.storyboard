@@ -25,16 +25,25 @@
                                 <rect key="frame" x="30" y="608" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="＜戻る"/>
+                                <connections>
+                                    <action selector="backPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uez-TX-cyn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-fr-4IL">
                                 <rect key="frame" x="163" y="608" width="49" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="再生"/>
+                                <connections>
+                                    <action selector="playPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shf-54-0Xn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-gW-7FL">
                                 <rect key="frame" x="272" y="608" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="進む＞"/>
+                                <connections>
+                                    <action selector="nextPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wA1-Wg-Jxt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,6 +66,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="slideView" destination="04R-Fi-lBr" id="gdB-lN-tYd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
