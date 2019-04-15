@@ -18,11 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="04R-Fi-lBr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="568"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrI-mh-BGC">
-                                <rect key="frame" x="30" y="608" width="73" height="41"/>
+                                <rect key="frame" x="30" y="606" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="＜戻る"/>
                                 <connections>
@@ -30,15 +27,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-fr-4IL">
-                                <rect key="frame" x="163" y="608" width="49" height="41"/>
+                                <rect key="frame" x="163" y="606" width="49" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="playPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shf-54-0Xn"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04R-Fi-lBr">
+                                <rect key="frame" x="30" y="85" width="315" height="238"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-gW-7FL">
-                                <rect key="frame" x="272" y="608" width="73" height="41"/>
+                                <rect key="frame" x="272" y="606" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="進む＞"/>
                                 <connections>
@@ -48,21 +48,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerX" secondItem="04R-Fi-lBr" secondAttribute="centerX" id="2ji-gf-eaP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rfL-gW-7FL" secondAttribute="bottom" constant="18" id="4VJ-NZ-aqa"/>
-                            <constraint firstItem="04R-Fi-lBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4eZ-Z6-XOa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MrI-mh-BGC" secondAttribute="bottom" constant="18" id="4ei-VY-jjj"/>
-                            <constraint firstItem="04R-Fi-lBr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5j0-ar-VM6"/>
-                            <constraint firstItem="MrI-mh-BGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Lcc-hW-c4V"/>
-                            <constraint firstItem="rfL-gW-7FL" firstAttribute="top" secondItem="04R-Fi-lBr" secondAttribute="bottom" constant="20" id="OhP-jq-E04"/>
-                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="QZu-jL-itL"/>
-                            <constraint firstItem="3sR-fr-4IL" firstAttribute="top" secondItem="04R-Fi-lBr" secondAttribute="bottom" constant="20" id="dpR-fy-KlW"/>
-                            <constraint firstItem="MrI-mh-BGC" firstAttribute="top" secondItem="04R-Fi-lBr" secondAttribute="bottom" constant="20" id="h7V-UO-Krm"/>
-                            <constraint firstItem="04R-Fi-lBr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j0o-Af-OJm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfL-gW-7FL" secondAttribute="trailing" constant="30" id="nV8-Ja-4j2"/>
-                            <constraint firstItem="rfL-gW-7FL" firstAttribute="top" secondItem="04R-Fi-lBr" secondAttribute="bottom" constant="20" id="nXJ-fd-CdB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3sR-fr-4IL" secondAttribute="bottom" constant="18" id="qHf-Aj-sRq"/>
-                            <constraint firstItem="rfL-gW-7FL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="s45-rc-N3J"/>
+                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerX" secondItem="04R-Fi-lBr" secondAttribute="centerX" id="6uk-KX-RuW"/>
+                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="B3g-Jo-UWe"/>
+                            <constraint firstItem="rfL-gW-7FL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="DDW-Ro-q6y"/>
+                            <constraint firstItem="MrI-mh-BGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="MW0-3K-hJx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3sR-fr-4IL" secondAttribute="bottom" constant="20" id="PW4-gy-K3n"/>
+                            <constraint firstItem="04R-Fi-lBr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Qqs-hE-ICW"/>
+                            <constraint firstItem="04R-Fi-lBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Wmi-qB-L0c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfL-gW-7FL" secondAttribute="trailing" constant="30" id="YdG-vy-bOi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="04R-Fi-lBr" secondAttribute="trailing" constant="30" id="wQB-lX-Uck"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
