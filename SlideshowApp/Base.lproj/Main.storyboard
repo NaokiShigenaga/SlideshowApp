@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrI-mh-BGC">
-                                <rect key="frame" x="30" y="606" width="73" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrI-mh-BGC">
+                                <rect key="frame" x="40" y="310" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="＜戻る"/>
                                 <connections>
                                     <action selector="backPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uez-TX-cyn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-fr-4IL">
-                                <rect key="frame" x="163" y="606" width="49" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-fr-4IL">
+                                <rect key="frame" x="163" y="310" width="49" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="再生">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,15 +36,19 @@
                                     <action selector="playPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shf-54-0Xn"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04R-Fi-lBr">
-                                <rect key="frame" x="30" y="85" width="315" height="238"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="04R-Fi-lBr">
+                                <rect key="frame" x="40" y="40" width="295" height="250"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="600-ag-XaT"/>
+                                    <constraint firstAttribute="width" constant="300" id="xHD-2K-3iO"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="FWl-3u-pzo" appends="YES" id="14R-Yi-JxH"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-gW-7FL">
-                                <rect key="frame" x="272" y="606" width="73" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-gW-7FL">
+                                <rect key="frame" x="262" y="310" width="73" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="進む＞"/>
                                 <connections>
@@ -54,15 +58,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerX" secondItem="04R-Fi-lBr" secondAttribute="centerX" id="6uk-KX-RuW"/>
-                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="B3g-Jo-UWe"/>
-                            <constraint firstItem="rfL-gW-7FL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="DDW-Ro-q6y"/>
-                            <constraint firstItem="MrI-mh-BGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="MW0-3K-hJx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3sR-fr-4IL" secondAttribute="bottom" constant="20" id="PW4-gy-K3n"/>
-                            <constraint firstItem="04R-Fi-lBr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Qqs-hE-ICW"/>
-                            <constraint firstItem="04R-Fi-lBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Wmi-qB-L0c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfL-gW-7FL" secondAttribute="trailing" constant="30" id="YdG-vy-bOi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="04R-Fi-lBr" secondAttribute="trailing" constant="30" id="wQB-lX-Uck"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="04R-Fi-lBr" secondAttribute="trailing" constant="40" id="KJ5-rf-pxp"/>
+                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="L53-bH-4UQ"/>
+                            <constraint firstItem="MrI-mh-BGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="M8I-iA-IjR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3sR-fr-4IL" secondAttribute="bottom" constant="20" id="dKr-hg-GZZ"/>
+                            <constraint firstItem="04R-Fi-lBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dNj-rT-wua"/>
+                            <constraint firstItem="04R-Fi-lBr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="k8I-j1-UgG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfL-gW-7FL" secondAttribute="trailing" constant="40" id="lK4-dW-kpr"/>
+                            <constraint firstItem="3sR-fr-4IL" firstAttribute="centerX" secondItem="04R-Fi-lBr" secondAttribute="centerX" id="nAX-FQ-Aka"/>
+                            <constraint firstItem="MrI-mh-BGC" firstAttribute="top" secondItem="04R-Fi-lBr" secondAttribute="bottom" constant="20" id="prz-lU-0UK"/>
+                            <constraint firstItem="rfL-gW-7FL" firstAttribute="centerY" secondItem="MrI-mh-BGC" secondAttribute="centerY" id="rNK-hP-beS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
