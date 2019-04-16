@@ -13,8 +13,34 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var slideView: UIImageView!
     
+
+    
+    //一定間隔で処理を行うためのタイマー設定
+    var timer: Timer!
+    
+    // タイマー用の時間のための変数
+    var timer_sec: Float = 0
+    
+    // selector: #selector(updatetimer(_:)) で指定された関数
+    // timeInterval: 0.1, repeats: true で指定された通り、0.1秒毎に呼び出され続ける
+    @objc func updateTimer(_ timer: Timer) {
+        self.timer_sec += 0.1
+        //表示されている画像番号から１増やす
+        dispImageNo += 1
+        //表示されている画像の番号を元に画像を表示する
+        displayImage()
+    }
+
+    
     //再生
     @IBAction func playPicture(_ sender: Any) {
+        //2秒で切り替わりを設定
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+        }
+        //ボタンの無効化
+        
+        
     }
     
     //戻る
@@ -71,11 +97,29 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let image = UIImage(named: "norimono_character6_shinkansen")
-        print("ImageDate1 \(image)") // デバッグ用
+        //print("ImageDate1 \(image)") // デバッグ用
         slideView.image = image
-        //slidePicture.image = image
-        print("ImageDate2 \(image)") // デバッグ用
+        //print("ImageDate2 \(image)") // デバッグ用
         
+    }
+    
+    
+    //画像タップ、遷移先設定
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        // 遷移先のResultViewControllerで宣言しているx, yに値を代入して渡す
+        resultViewController.img = dispImageNo
+        print("Date \(dispImageNo)") // デバッグ用
+        
+        //遷移するときはタイマーストップをかける
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
+    }
+    
+    @IBAction func onTapImage(_ sender: Any) {
     }
 
 }

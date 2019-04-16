@@ -12,6 +12,7 @@
 		004767F422605266009444FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004767F222605266009444FB /* Main.storyboard */; };
 		004767F622605267009444FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004767F522605267009444FB /* Assets.xcassets */; };
 		004767F922605267009444FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004767F722605267009444FB /* LaunchScreen.storyboard */; };
+		00A69279226567D0003C941E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A69278226567D0003C941E /* ResultViewController.swift */; };
 		00F2F3E3226407C9002D5D17 /* war_character_sensya.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F2F3E0226407C8002D5D17 /* war_character_sensya.png */; };
 		00F2F3E4226407C9002D5D17 /* norimono_character6_shinkansen.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F2F3E1226407C9002D5D17 /* norimono_character6_shinkansen.png */; };
 		00F2F3E5226407C9002D5D17 /* war_character_helicopter.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F2F3E2226407C9002D5D17 /* war_character_helicopter.png */; };
@@ -25,6 +26,7 @@
 		004767F522605267009444FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		004767F822605267009444FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		004767FA22605267009444FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00A69278226567D0003C941E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		00F2F3E0226407C8002D5D17 /* war_character_sensya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_character_sensya.png; sourceTree = "<group>"; };
 		00F2F3E1226407C9002D5D17 /* norimono_character6_shinkansen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = norimono_character6_shinkansen.png; sourceTree = "<group>"; };
 		00F2F3E2226407C9002D5D17 /* war_character_helicopter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_character_helicopter.png; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				004767F522605267009444FB /* Assets.xcassets */,
 				004767F722605267009444FB /* LaunchScreen.storyboard */,
 				004767FA22605267009444FB /* Info.plist */,
+				00A69278226567D0003C941E /* ResultViewController.swift */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				004767F122605266009444FB /* ViewController.swift in Sources */,
 				004767EF22605266009444FB /* AppDelegate.swift in Sources */,
+				00A69279226567D0003C941E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
