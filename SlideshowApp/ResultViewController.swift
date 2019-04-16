@@ -21,7 +21,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         //表示されている画像番号を元に画像を表示する
-        func displayImage(){
+        //func displayImage(){
             //画像の配列
             let imageNameArray = [
                 "norimono_character6_shinkansen",
@@ -37,18 +37,18 @@ class ResultViewController: UIViewController {
             
             //Image Viewに読み込んだ画像をセット
             imageView.image = image
-            imageView.contentMode = UIView.ContentMode.scaleAspectFit
             print("Date2 \(dispImageNo)") // デバッグ用
             
             
             
             //テスト表示
             // バンドルした画像ファイルを読み込み
-            let image2 = UIImage(named: "norimono_character6_shinkansen")
-            
+            //let image2 = UIImage(named: "norimono_character6_shinkansen")
+            //print("Date5 \(image2)")
             // Image Viewに画像を設定
-            imageView.image = image2
-        }
+            //imageView.image = image2
+            
+        //}
     }
     
     //戻るボタンの設定

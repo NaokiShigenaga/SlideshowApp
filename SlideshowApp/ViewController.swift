@@ -13,7 +13,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var slideView: UIImageView!
     
-
+    @IBOutlet weak var backPicture: UIButton!
+    
+    @IBOutlet weak var playPicture: UIButton!
+    
+    @IBOutlet weak var nextPicture: UIButton!
     
     //一定間隔で処理を行うためのタイマー設定
     var timer: Timer!
@@ -34,11 +38,34 @@ class ViewController: UIViewController {
     
     //再生
     @IBAction func playPicture(_ sender: Any) {
-        //2秒で切り替わりを設定
+        
         if self.timer == nil {
-            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            //2秒で切り替わりを設定
+            if self.timer == nil {
+                self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            }
+            //ボタンの無効化
+            backPicture.isEnabled = false
+            nextPicture.isEnabled = false
+            
+            //ボタンのタイトル変更
+            playPicture.setTitle("一時停止", for: .normal) // ボタンのタイトル
+            playPicture.setTitleColor(UIColor.red, for: .normal) // タイトルの色
+        }else if self.timer != nil {
+            //停止をする
+            if self.timer != nil {
+                self.timer.invalidate()
+                self.timer = nil
+            }
+            //ボタンの有効化
+            backPicture.isEnabled = true
+            nextPicture.isEnabled = true
+            
+            //ボタンのタイトル変更
+            playPicture.setTitle("再生", for: .normal) // ボタンのタイトル
+            playPicture.setTitleColor(UIColor.black, for: .normal) // タイトルの色
+            
         }
-        //ボタンの無効化
         
         
     }
@@ -117,6 +144,14 @@ class ViewController: UIViewController {
             self.timer.invalidate()
             self.timer = nil
         }
+        
+        //ボタンのタイトル変更
+        playPicture.setTitle("再生", for: .normal) // ボタンのタイトル
+        playPicture.setTitleColor(UIColor.black, for: .normal) // タイトルの色
+        
+        //ボタンの有効化
+        backPicture.isEnabled = true
+        nextPicture.isEnabled = true
     }
     
     @IBAction func onTapImage(_ sender: Any) {
